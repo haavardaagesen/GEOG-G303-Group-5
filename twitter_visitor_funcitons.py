@@ -97,12 +97,12 @@ def twitterComparisonFinnsForeigners(filenames, labels):
         ax11.axis('off')
         ax12.axis('off')
         leg11 = ax11.get_legend()
-        for text, label in zip(leg11.get_texts(), quant):
-            text.set_text(label)
+        #for text, label in zip(leg11.get_texts(), quant):
+            #text.set_text(label)
         leg12 = ax12.get_legend()
-        for text, label in zip(leg12.get_texts(), quant):
-            text.set_text(label)
-        tit = 'Share of Visitors by Region \n Twitter Users - ' + labels[i]
+        #for text, label in zip(leg12.get_texts(), quant):
+            #text.set_text(label)
+        tit = 'Visitors by Region \n Twitter Users - ' + labels[i]
         fig.suptitle(tit)
         # Remove the empty white-space around the axes
         # plt.tight_layout()
@@ -150,12 +150,12 @@ def finnsTwitterOfficial(regional_names, official_data, labels, finland_fp):
         ax11.axis('off')
         ax12.axis('off')
         leg11 = ax11.get_legend()
-        for text, label in zip(leg11.get_texts(), quant):
-            text.set_text(label)
+        #for text, label in zip(leg11.get_texts(), quant):
+            #text.set_text(label)
         leg12 = ax12.get_legend()
-        for text, label in zip(leg12.get_texts(), quant):
-            text.set_text(label)
-        tit = 'Share of Finnish Visitors by Region \n ' + labels[i]
+        #for text, label in zip(leg12.get_texts(), quant):
+            #text.set_text(label)
+        tit = 'Finnish Visitors by Region \n ' + labels[i]
         fig.suptitle(tit)
         # plt.tight_layout()
         outfp = 'maps/TW_vs_Official_Finns_' + labels[i] + '.png'
@@ -202,12 +202,12 @@ def foreignersTwitterOfficial(regional_names, official_data, labels, finland_fp)
         ax11.axis('off')
         ax12.axis('off')
         leg11 = ax11.get_legend()
-        for text, label in zip(leg11.get_texts(), quant):
-            text.set_text(label)
+        #for text, label in zip(leg11.get_texts(), quant):
+            #text.set_text(label)
         leg12 = ax12.get_legend()
-        for text, label in zip(leg12.get_texts(), quant):
-            text.set_text(label)
-        tit = 'Share of Foreign Visitors by Region \n - ' + labels[i]
+        #for text, label in zip(leg12.get_texts(), quant):
+            #text.set_text(label)
+        tit = 'Foreign Visitors by Region \n - ' + labels[i]
         fig.suptitle(tit)
         # plt.tight_layout()
         outfp = 'maps/TW_vs_Official_Foreigners_' + labels[i] + '.png'
@@ -262,12 +262,15 @@ def officialComparison(official_finns, official_foreigners, labels, finland_fp):
         ax11.axis('off')
         ax12.axis('off')
         leg11 = ax11.get_legend()
-        for text, label in zip(leg11.get_texts(), quant):
-            text.set_text(label)
+        #for text, label in zip(leg11.get_texts(), quant):
+            #text.round(0)
+            #print(text)
+            #print(type(text))
+            #text.set_text(text.round(0))
         leg12 = ax12.get_legend()
-        for text, label in zip(leg12.get_texts(), quant):
-            text.set_text(label)
-        tit = 'Share of Visitors by Reigion \n Official statistics - ' + \
+        #for text, label in zip(leg12.get_texts(), quant):
+            #text.set_text(label)
+        tit = 'Visitors by Reigion \n Official statistics - ' + \
             labels[i]
         fig.suptitle(tit)
         outfp = 'maps/Official_Finns_Foreigners_' + labels[i] + '.png'
